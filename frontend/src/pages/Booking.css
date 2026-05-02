@@ -1,0 +1,9 @@
+.booking-page-layout {
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .booking-page-layout {
+    grid-template-columns: 1fr !important;
+  }
+}

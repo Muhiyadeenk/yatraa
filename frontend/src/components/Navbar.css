@@ -1,0 +1,138 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 30px 0;
+  color: white; /* Default for home transparent */
+}
+
+.navbar.glass-nav {
+  padding: 15px 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: var(--glass-border);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar.solid-nav {
+  background: var(--bg-pure);
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar.glass-nav .logo, .navbar.solid-nav .logo {
+  color: var(--primary-dark);
+}
+
+.dot {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.05rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar.glass-nav .nav-link:hover, .navbar.solid-nav .nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 20px;
+}
+
+.account-pill:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbar.glass-nav .account-pill, .navbar.solid-nav .account-pill {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.navbar.glass-nav .account-pill:hover, .navbar.solid-nav .account-pill:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar.glass-nav .nav-actions, .navbar.solid-nav .nav-actions {
+  border-left: 1px solid var(--border);
+}
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-toggle {
+  color: inherit;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  color: var(--text-main);
+}
+
+.mobile-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 992px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
+  .nav-actions { display: none; }
+}

@@ -15,9 +15,7 @@ const PayPalPayment = ({ amount, bookingId, onSuccess, onError, onCancel }) => {
   const createOrder = async (data, actions) => {
     if (bookingId) {
       try {
-        const token = localStorage.getItem('yathraa_tokens') 
-            ? JSON.parse(localStorage.getItem('yathraa_tokens')).access 
-            : null;
+        const token = localStorage.getItem('yathraa_token');
             
         const response = await fetch(`${API}/api/v1/payments/paypal/create/`, {
           method: "POST",

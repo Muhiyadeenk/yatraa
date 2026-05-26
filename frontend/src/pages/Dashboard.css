@@ -175,3 +175,43 @@
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 24px !important;
+  }
+  .dashboard-header .flex {
+    flex-direction: column;
+  }
+  .grid[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding-top: 20px;
+  }
+  .wishlist-card .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .booking-card > .flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+  .booking-card .flex[style*="align-items: flex-end"] {
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .settings-group .grid[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+  .form-group[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+}

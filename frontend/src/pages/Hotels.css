@@ -181,5 +181,6 @@
 @media (max-width: 700px) {
   .hotels-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 }

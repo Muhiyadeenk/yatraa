@@ -33,3 +33,10 @@
   margin-top: 25px;
   font-size: 0.95rem;
 }
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 24px;
+    margin: 16px;
+  }
+}

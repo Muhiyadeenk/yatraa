@@ -120,7 +120,8 @@ button {
 }
 
 .section {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-title {
@@ -204,11 +205,19 @@ button {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .grid-cols-4, .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
-  .section { padding: 70px 0; }
+  .section { padding-top: 70px; padding-bottom: 70px; }
   .section-title h2 { font-size: 2.25rem; }
+  .grid[style*="grid-template-columns"],
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 768px) {
   .grid-cols-2 { grid-template-columns: 1fr; }
-  .section { padding: 50px 0; }
+  .section { padding-top: 50px; padding-bottom: 50px; }
+  .grid[style*="grid-template-columns"],
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
 }

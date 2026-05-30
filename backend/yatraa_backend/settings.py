@@ -156,11 +156,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.User'
 
 CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)
-CORS_ALLOWED_ORIGINS = config(
-    'CORS_ALLOWED_ORIGINS', 
-    default="http://localhost:5173,http://127.0.0.1:5173", 
-    cast=Csv()
-)
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://yatraa-omega.vercel.app",
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

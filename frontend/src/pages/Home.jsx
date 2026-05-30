@@ -66,7 +66,7 @@ const DestinationRow = ({ title, destinations }) => {
   );
 };
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://yatraa-87bo.onrender.com';
 
 const Home = () => {
   const [displayHotels, setDisplayHotels] = useState([]);

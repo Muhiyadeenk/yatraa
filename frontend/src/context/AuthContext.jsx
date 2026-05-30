@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useMemo } from 'react';
 
 export const AuthContext = createContext();
 
-const API_BASE = 'http://127.0.0.1:8000/api/v1';
+const API_BASE = 'https://yatraa-87bo.onrender.com/api/v1';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);

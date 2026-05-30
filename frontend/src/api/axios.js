@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/v1/',
+  baseURL: 'https://yatraa-87bo.onrender.com/api/v1/',
 });
 
 api.interceptors.request.use((config) => {
@@ -24,7 +24,7 @@ api.interceptors.response.use(
       
       if (refreshToken) {
         try {
-          const response = await axios.post('http://127.0.0.1:8000/api/v1/auth/token/refresh/', {
+          const response = await axios.post('https://yatraa-87bo.onrender.com/api/v1/auth/token/refresh/', {
             refresh: refreshToken
           });
           

@@ -37,7 +37,7 @@ const HotelDetail = () => {
   const prevMonth = () => setCalendarMonth(m => new Date(m.getFullYear(), m.getMonth() - 1, 1));
   const nextMonth = () => setCalendarMonth(m => new Date(m.getFullYear(), m.getMonth() + 1, 1));
 
-  const API = 'http://127.0.0.1:8000';
+  const API = 'https://yatraa-87bo.onrender.com';
 
   useEffect(() => {
     const loadHotel = async () => {

@@ -5,7 +5,7 @@ import { mockHotels } from '../mockData';
 import { useLocation } from 'react-router-dom';
 import './Hotels.css';
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://yatraa-87bo.onrender.com';
 
 const Hotels = () => {
   const location = useLocation();

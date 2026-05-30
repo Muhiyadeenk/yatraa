@@ -8,7 +8,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import './AdminPanel.css';
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://yatraa-87bo.onrender.com';
 
 // ── Default form ──────────────────────────────────────────────────────────────
 const defaultForm = {

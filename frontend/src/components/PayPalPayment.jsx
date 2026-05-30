@@ -10,7 +10,7 @@ const PayPalPayment = ({ amount, bookingId, onSuccess, onError, onCancel }) => {
     intent: "capture",
   };
 
-  const API = 'http://127.0.0.1:8000';
+  const API = 'https://yatraa-87bo.onrender.com';
 
   const createOrder = async (data, actions) => {
     if (bookingId) {

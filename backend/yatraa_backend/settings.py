@@ -161,6 +161,15 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "https://yatraa-omega.vercel.app",
 ]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://yatraa-omega.vercel.app",
+    "https://*.vercel.app",
+]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
